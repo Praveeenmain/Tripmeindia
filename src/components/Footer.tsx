@@ -14,7 +14,7 @@ export const Footer = () => {
             <img 
               src={logo} 
               alt="BookMyToursIndia.com Logo" 
-              className="h-14 md:h-16 w-auto mb-4"
+              className="w-[180px] md:w-[220px] h-auto mb-4"
             />
             <p className="mb-4 opacity-90">
               Your trusted partner for affordable and reliable taxi services in Tirupati & Tirumala. Making your journey comfortable and memorable.

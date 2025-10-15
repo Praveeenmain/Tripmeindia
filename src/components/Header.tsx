@@ -8,7 +8,7 @@ export const Header = () => {
           <img 
             src={logo} 
             alt="BookMyToursIndia.com - Affordable Taxi & Travel Services in Tirupati" 
-            className="h-14 md:h-16 lg:h-18 w-auto"
+            className="w-[200px] md:w-[250px] h-auto"
           />
         </div>
       </div>

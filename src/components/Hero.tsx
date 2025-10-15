@@ -24,7 +24,7 @@ export const Hero = () => {
             <img 
               src={logo} 
               alt="BookMyToursIndia.com Logo" 
-              className="h-20 md:h-24 lg:h-28 w-auto drop-shadow-2xl"
+              className="w-[200px] md:w-[250px] h-auto drop-shadow-2xl"
             />
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
