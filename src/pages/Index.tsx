@@ -1,3 +1,4 @@
+import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { Services } from "@/components/Services";
@@ -9,6 +10,7 @@ import { FloatingButtons } from "@/components/FloatingButtons";
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <Header />
       <Hero />
       <WhyChooseUs />
       <Services />

@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, MessageCircle, Facebook, Twitter, Instagram } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 export const Footer = () => {
   const phoneNumber = "919876543210"; // Replace with actual number
@@ -10,7 +11,11 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-4 text-secondary">BookMyToursIndia.com</h3>
+            <img 
+              src={logo} 
+              alt="BookMyToursIndia.com Logo" 
+              className="h-12 md:h-14 w-auto mb-4 brightness-0 invert"
+            />
             <p className="mb-4 opacity-90">
               Your trusted partner for affordable and reliable taxi services in Tirupati & Tirumala. Making your journey comfortable and memorable.
             </p>

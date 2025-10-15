@@ -1,13 +1,14 @@
 import { Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-tirupati.jpg";
+import logo from "@/assets/logo.png";
 
 export const Hero = () => {
   const phoneNumber = "919876543210"; // Replace with actual number
   const whatsappMessage = encodeURIComponent("Hi, I want to book a cab in Tirupati");
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-20">
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -19,6 +20,13 @@ export const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-20 text-center">
         <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
+          <div className="flex justify-center mb-6">
+            <img 
+              src={logo} 
+              alt="BookMyToursIndia.com Logo" 
+              className="h-16 md:h-20 w-auto drop-shadow-2xl"
+            />
+          </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
             Affordable & Reliable Taxi Services in <span className="text-secondary">Tirupati & Tirumala</span>
           </h1>
