@@ -1,5 +1,6 @@
 import { MapPin, Plane, Mountain, Navigation } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 const services = [
   {
@@ -26,7 +27,7 @@ const services = [
 
 export const Services = () => {
   return (
-    <section className="py-16 md:py-24 bg-background">
+    <section id="services" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -60,6 +61,11 @@ export const Services = () => {
               </CardHeader>
             </Card>
           ))}
+        </div>
+        <div className="mt-10 flex justify-center">
+          <Button variant="cta" size="lg" asChild>
+            <a href="#packages" aria-label="View all tour packages">View Our All Packages</a>
+          </Button>
         </div>
       </div>
     </section>

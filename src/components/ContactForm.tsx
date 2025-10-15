@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { toast } from "sonner";
 import { Send } from "lucide-react";
@@ -10,14 +9,26 @@ export const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    tripDetails: ""
+    pickup: "",
+    timing: "",
+    location: "",
+    packageName: "",
+    advancePaid: ""
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
     // Input validation
-    if (!formData.name.trim() || !formData.phone.trim() || !formData.tripDetails.trim()) {
+    if (
+      !formData.name.trim() ||
+      !formData.phone.trim() ||
+      !formData.pickup.trim() ||
+      !formData.timing.trim() ||
+      !formData.location.trim() ||
+      !formData.packageName.trim() ||
+      !formData.advancePaid.trim()
+    ) {
       toast.error("Please fill in all fields");
       return;
     }
@@ -27,16 +38,37 @@ export const ContactForm = () => {
       return;
     }
 
+    const advanceNumber = Number(formData.advancePaid);
+    if (Number.isNaN(advanceNumber) || advanceNumber < 0) {
+      toast.error("Please enter a valid advance amount");
+      return;
+    }
+
     // Create WhatsApp message
-    const message = `New Booking Request:\nName: ${formData.name}\nPhone: ${formData.phone}\nTrip Details: ${formData.tripDetails}`;
-    const whatsappNumber = "919876543210"; // Replace with actual number
+    const message = `New Booking Request:`+
+      `\nName: ${formData.name}`+
+      `\nPhone: ${formData.phone}`+
+      `\nPickup: ${formData.pickup}`+
+      `\nTiming: ${formData.timing}`+
+      `\nLocation: ${formData.location}`+
+      `\nTour Package: ${formData.packageName}`+
+      `\nAdvance Paid: ₹${advanceNumber.toFixed(2)}`;
+    const whatsappNumber = "919959969880"; // Updated number
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     
     // Open WhatsApp
     window.open(whatsappUrl, '_blank');
     
     // Reset form
-    setFormData({ name: "", phone: "", tripDetails: "" });
+    setFormData({
+      name: "",
+      phone: "",
+      pickup: "",
+      timing: "",
+      location: "",
+      packageName: "",
+      advancePaid: ""
+    });
     toast.success("Opening WhatsApp to send your booking request!");
   };
 
@@ -55,7 +87,7 @@ export const ContactForm = () => {
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <Input
                     placeholder="Your Name *"
                     value={formData.name}
@@ -64,9 +96,6 @@ export const ContactForm = () => {
                     maxLength={100}
                     required
                   />
-                </div>
-                
-                <div>
                   <Input
                     placeholder="Phone Number *"
                     type="tel"
@@ -76,19 +105,49 @@ export const ContactForm = () => {
                     maxLength={15}
                     required
                   />
-                </div>
-                
-                <div>
-                  <Textarea
-                    placeholder="Trip Details (Pickup location, destination, date, time, number of passengers) *"
-                    value={formData.tripDetails}
-                    onChange={(e) => setFormData({ ...formData, tripDetails: e.target.value })}
-                    className="min-h-32 resize-none"
-                    maxLength={500}
+                  <Input
+                    placeholder="Pickup (e.g., Tirupati Railway Station) *"
+                    value={formData.pickup}
+                    onChange={(e) => setFormData({ ...formData, pickup: e.target.value })}
+                    className="h-12"
+                    maxLength={150}
+                    required
+                  />
+                  <Input
+                    placeholder="Timing (e.g., 10:30 AM, 24 Oct) *"
+                    value={formData.timing}
+                    onChange={(e) => setFormData({ ...formData, timing: e.target.value })}
+                    className="h-12"
+                    maxLength={100}
+                    required
+                  />
+                  <Input
+                    placeholder="Location / Destination *"
+                    value={formData.location}
+                    onChange={(e) => setFormData({ ...formData, location: e.target.value })}
+                    className="h-12"
+                    maxLength={150}
+                    required
+                  />
+                  <Input
+                    placeholder="Tour Package Name *"
+                    value={formData.packageName}
+                    onChange={(e) => setFormData({ ...formData, packageName: e.target.value })}
+                    className="h-12"
+                    maxLength={150}
+                    required
+                  />
+                  <Input
+                    placeholder="Advance Paid (₹) *"
+                    type="number"
+                    inputMode="decimal"
+                    value={formData.advancePaid}
+                    onChange={(e) => setFormData({ ...formData, advancePaid: e.target.value })}
+                    className="h-12"
                     required
                   />
                 </div>
-                
+
                 <Button 
                   type="submit" 
                   variant="hero"
