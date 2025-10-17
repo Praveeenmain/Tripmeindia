@@ -8,12 +8,12 @@ export const Header = () => {
           <div className="flex items-center gap-1.5 sm:gap-2 md:gap-3">
             <img 
               src={logo} 
-              alt="BookMyToursIndia.com - Affordable Taxi & Travel Services in Tirupati" 
+              alt="Tripmeindia.com - Affordable Taxi & Travel Services" 
               className="h-12 sm:h-16 md:h-24 lg:h-28 w-auto block -my-1 md:-my-2"
             />
             <div className="block leading-tight select-none">
-              <span className="text-sm sm:text-[16px] md:text-lg lg:text-xl font-bold tracking-tight" style={{ color: '#0B3A75' }}>BookMy</span>
-              <span className="text-sm sm:text-[16px] md:text-lg lg:text-xl font-bold tracking-tight" style={{ color: '#4AA0D9' }}>ToursIndia.com</span>
+              <span className="text-sm sm:text-[16px] md:text-lg lg:text-xl font-bold tracking-tight" style={{ color: '#0B3A75' }}>Tripme</span>
+              <span className="text-sm sm:text-[16px] md:text-lg lg:text-xl font-bold tracking-tight" style={{ color: '#4AA0D9' }}>India</span>
             </div>
           </div>
           <nav className="flex items-center gap-6">

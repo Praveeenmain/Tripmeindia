@@ -3,7 +3,7 @@ import logo from "@/assets/logo.png";
 
 export const Footer = () => {
   const phoneNumber = "919959969880"; // Updated number
-  const email = "info@bookmytoursindia.com";
+  const email = "tripmeindia.care@gmail.com";
 
   return (
     <footer className="bg-foreground text-background py-12">
@@ -18,8 +18,8 @@ export const Footer = () => {
                 className="h-12 sm:h-14 md:h-16 w-auto"
               />
               <div className="leading-tight select-none">
-                <span className="text-sm sm:text-base md:text-lg font-bold tracking-tight text-white" style={{ color: '#E8F4FD' }}>BookMy</span>
-                <span className="text-sm sm:text-base md:text-lg font-bold tracking-tight" style={{ color: '#4AA0D9' }}>ToursIndia.com</span>
+                <span className="text-sm sm:text-base md:text-lg font-bold tracking-tight text-white" style={{ color: '#E8F4FD' }}>Tripme</span>
+                <span className="text-sm sm:text-base md:text-lg font-bold tracking-tight" style={{ color: '#4AA0D9' }}>India</span>
               </div>
             </div>
             <p className="mb-4 opacity-90">
@@ -84,7 +84,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-background/20 pt-8 text-center">
           <p className="opacity-75">
-            Copyright © 2025 BookMyToursIndia.com - All Rights Reserved
+            Copyright © 2025 TripmeIndia.com - All Rights Reserved
           </p>
           <p className="mt-2 text-sm opacity-75">
             Keywords: Tirupati Taxi, Tirumala Cab Booking, Tirupati Travels, Affordable Cabs in Tirupati, Temple Visit Taxi, Places to Visit in Tirumala, Tirupati Car Rental, Cabs in Tirupati, Tirumala Visiting Places, Car Rental in Tirupati

@@ -1,5 +1,6 @@
 import { Clock, DollarSign, Shield, Car } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 const features = [
   {
@@ -25,19 +26,22 @@ const features = [
 ];
 
 export const WhyChooseUs = () => {
+  const phoneNumber = "919959969880";
+  const whatsappMessage = encodeURIComponent("Hi, I want to book a taxi service in Tirupati. Please provide me with the details and pricing.");
+
   return (
     <section className="py-16 md:py-24 bg-accent">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Why Choose <span className="text-primary">BookMyToursIndia.com</span>
+            Why Choose <span className="text-primary">TripmeIndia.com</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Your trusted travel partner in Tirupati offering exceptional service and unmatched reliability
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {features.map((feature, index) => (
             <Card 
               key={index}
@@ -50,6 +54,24 @@ export const WhyChooseUs = () => {
               <p className="text-muted-foreground">{feature.description}</p>
             </Card>
           ))}
+        </div>
+        
+        {/* Book Now Button */}
+        <div className="text-center">
+          <Button 
+            size="lg"
+            className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+            asChild
+          >
+            <a 
+              href={`https://wa.me/${phoneNumber}?text=${whatsappMessage}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Book Now via WhatsApp"
+            >
+              📱 Book Now - 24x7 Service Available
+            </a>
+          </Button>
         </div>
       </div>
     </section>
