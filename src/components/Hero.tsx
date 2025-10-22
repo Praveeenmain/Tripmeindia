@@ -1,17 +1,17 @@
 import { Phone, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/tirumala.png";
 
 export const Hero = () => {
   const phoneNumber = "919959969880"; // Updated number
   const whatsappMessage = encodeURIComponent("Hi, I want to book a cab in Tirupati");
+  const heroImage = "https://images.pexels.com/photos/3408354/pexels-photo-3408354.jpeg";
 
   return (
-    <section 
+    <section
       className="relative min-h-[60vh] md:min-h-[85vh] lg:min-h-screen flex flex-col md:flex-row items-center justify-center overflow-hidden pt-16 md:pt-20"
     >
       {/* Desktop Background Image */}
-      <div 
+      <div
         className="hidden md:block absolute inset-0 w-full h-full"
         style={{
           backgroundImage: `url(${heroImage})`,
@@ -20,15 +20,15 @@ export const Hero = () => {
           backgroundRepeat: 'no-repeat'
         }}
       />
-      
+
       {/* Mobile: Warm background color to match temple */}
       <div className="md:hidden absolute inset-0 bg-gradient-to-br from-amber-600 to-orange-600" />
-      
+
       {/* Mobile: Temple Image at Top */}
       <div className="md:hidden relative z-10 pt-4 pb-2 px-4">
-        <img 
-          src={heroImage} 
-          alt="Tirumala Temple" 
+        <img
+          src={heroImage}
+          alt="Tirumala Temple"
           className="w-full max-w-sm mx-auto rounded-lg shadow-2xl"
         />
       </div>

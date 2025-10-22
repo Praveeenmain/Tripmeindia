@@ -1,9 +1,6 @@
 import { Car, Package, Bus } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import carRentalsImage from "@/assets/car-rentals.png";
-import tourPackagesImage from "@/assets/tour-packages.png";
-import busToursImage from "@/assets/bus-tours.png";
 
 const quickServices = [
   {
@@ -12,7 +9,7 @@ const quickServices = [
     description: "Premium cars for your comfort and convenience. Available for hourly, daily, and weekly rentals.",
     placeholderColor: "bg-blue-500",
     whatsappMessage: "Hi, I want to book Car Rental service",
-    image: carRentalsImage
+    image: "https://images.pexels.com/photos/164634/pexels-photo-164634.jpeg"
   },
   {
     icon: Package,
@@ -20,15 +17,15 @@ const quickServices = [
     description: "Complete tour packages to explore Tirupati's temples and surrounding attractions with experienced guides.",
     placeholderColor: "bg-green-500",
     whatsappMessage: "Hi, I want to book Tour Package",
-    image: tourPackagesImage
+    image: "https://images.pexels.com/photos/1320684/pexels-photo-1320684.jpeg"
   },
   {
     icon: Bus,
     title: "Bus Tours",
     description: "Group bus tours for comfortable travel to multiple destinations. Perfect for families and groups.",
-    placeholderColor: "bg-purple-500",
+    placeholderColor: "bg-orange-500",
     whatsappMessage: "Hi, I want to book Bus Tour",
-    image: busToursImage
+    image: "https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg"
   }
 ];
 
