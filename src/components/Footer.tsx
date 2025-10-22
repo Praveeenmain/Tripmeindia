@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
-
+import Logo from "@/assets/logo.png";
 export const Footer = () => {
   const phoneNumber = "919959969880"; // Updated number
   const email = "tripmeindia.care@gmail.com";
@@ -11,6 +11,7 @@ export const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-2 md:gap-3 mb-4">
+              <img src={Logo} alt="TripmeIndia" className="h-12 sm:h-16 md:h-24 lg:h-28 w-auto block -my-1 md:-my-2" />
               <div className="leading-tight select-none">
                 <span className="text-sm sm:text-base md:text-lg font-bold tracking-tight text-white" style={{ color: '#E8F4FD' }}>Tripme</span>
                 <span className="text-sm sm:text-base md:text-lg font-bold tracking-tight" style={{ color: '#4AA0D9' }}>India</span>

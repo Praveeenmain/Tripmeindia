@@ -1,10 +1,10 @@
 import { Phone, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import heroImage from "@/assets/tirumala.png";
 export const Hero = () => {
   const phoneNumber = "919959969880"; // Updated number
   const whatsappMessage = encodeURIComponent("Hi, I want to book a cab in Tirupati");
-  const heroImage = "https://images.pexels.com/photos/3408354/pexels-photo-3408354.jpeg";
+
 
   return (
     <section

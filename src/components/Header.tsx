@@ -1,15 +1,19 @@
+import Logo from "@/assets/logo.png";
 export const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-0 border-b border-border shadow-sm">
       <div className="container mx-auto px-3 sm:px-4 py-1">
         <div className="flex items-center justify-between gap-2 sm:gap-3 md:gap-4">
           <div className="flex items-center gap-1.5 sm:gap-2 md:gap-3">
+            <img src={Logo} alt="TripmeIndia" className="h-12 sm:h-16 md:h-24 lg:h-28 w-auto block -my-1 md:-my-2" />
             <div className="block leading-tight select-none">
+              
               <span className="text-sm sm:text-[16px] md:text-lg lg:text-xl font-bold tracking-tight" style={{ color: '#0B3A75' }}>Tripme</span>
               <span className="text-sm sm:text-[16px] md:text-lg lg:text-xl font-bold tracking-tight" style={{ color: '#4AA0D9' }}>India</span>
             </div>
           </div>
           <nav className="flex items-center gap-6">
+
             <a href="#services" className="hidden sm:inline text-foreground/80 hover:text-foreground transition-colors font-medium">Services</a>
             <a 
               href={`https://wa.me/919959969880?text=${encodeURIComponent("Hi, I want to book a cab in Tirupati")}`}
