@@ -6,6 +6,170 @@ export interface PackagePricing {
   pax12: number;
 }
 
+export interface DailyPackagePricing {
+  sedan: number;
+  innova: number;
+  innovaCrysta: number;
+  tempoTraveller: number;
+}
+
+export interface DailyPackageData {
+  id: string;
+  title: string;
+  subtitle?: string;
+  description?: string;
+  distance?: string;
+  duration?: string;
+  pricing: DailyPackagePricing;
+  includes?: string[];
+  excludes?: string[];
+}
+
+export const dailyPackages = [
+  {
+    id: "airport-railway-transfers",
+    title: "Airport & Railway Station Transfers",
+    services: [
+      {
+        id: "tirupati-airport",
+        title: "Tirupati airport transfers (one way)",
+        pricing: {
+          sedan: 1125,
+          innova: 1625,
+          innovaCrysta: 2125,
+          tempoTraveller: 2750
+        }
+      },
+      {
+        id: "renigunta-railway",
+        title: "Renigunta railway station transfers (one way)",
+        pricing: {
+          sedan: 938,
+          innova: 1375,
+          innovaCrysta: 1875,
+          tempoTraveller: 2500
+        }
+      }
+    ]
+  },
+  {
+    id: "local-temple-packages",
+    title: "Local Temple Sightseeing Packages",
+    services: [
+      {
+        id: "tirupati-local-temples",
+        title: "Tirupati Local Temples",
+        duration: "4 hours & 40 KMS",
+        pricing: {
+          sedan: 2250,
+          innova: 2875,
+          innovaCrysta: 3625,
+          tempoTraveller: 4375
+        }
+      },
+      {
+        id: "tirupati-tirumala-trip",
+        title: "Tirupati Tirumala Trip",
+        duration: "5 hrs & 50 KMS",
+        pricing: {
+          sedan: 2250,
+          innova: 2875,
+          innovaCrysta: 3750,
+          tempoTraveller: 4375
+        }
+      }
+    ]
+  },
+  {
+    id: "extended-pilgrimage",
+    title: "Extended Pilgrimage Tours",
+    services: [
+      {
+        id: "srikalahasti-trip",
+        title: "Srikalahasti Trip",
+        duration: "Up & down 5 hrs & 80 KMS",
+        pricing: {
+          sedan: 3125,
+          innova: 4125,
+          innovaCrysta: 4750,
+          tempoTraveller: 5875
+        }
+      },
+      {
+        id: "srivari-mettu-drop",
+        title: "Srivari Mettu Drop",
+        description: "Special trekking route access",
+        pricing: {
+          sedan: 1625,
+          innova: 2000,
+          innovaCrysta: 2500,
+          tempoTraveller: 3500
+        }
+      }
+    ]
+  },
+  {
+    id: "additional-charges",
+    title: "Additional Charges & Outstation Rates",
+    services: [
+      {
+        id: "extra-hour",
+        title: "Extra Hour",
+        pricing: {
+          sedan: 188,
+          innova: 250,
+          innovaCrysta: 313,
+          tempoTraveller: 438
+        }
+      },
+      {
+        id: "extra-kms",
+        title: "Extra Kms",
+        pricing: {
+          sedan: 18,
+          innova: 24,
+          innovaCrysta: 28,
+          tempoTraveller: 32
+        }
+      },
+      {
+        id: "outstation-rates",
+        title: "Outstation Rs. / kms",
+        description: "Minimum 300 kms per day",
+        pricing: {
+          sedan: 18,
+          innova: 24,
+          innovaCrysta: 28,
+          tempoTraveller: 32
+        }
+      }
+    ]
+  }
+];
+
+export const policyInfo = [
+  {
+    id: "gst-taxes",
+    title: "GST & Taxes",
+    description: "GST 18% will be additional on total billing"
+  },
+  {
+    id: "ghat-road-policy",
+    title: "Ghat Road Policy",
+    description: "AC will turn off in ghat roads\nTirupati - Tirumala Ghat roads will close between 12 AM to 3 AM"
+  },
+  {
+    id: "guest-responsibilities",
+    title: "Guest Responsibilities",
+    description: "Driver allowances, Toll gates and Parking charges has to be pay by the guest\nInterstate permits has to be pay by guest (if applicable)"
+  },
+  {
+    id: "night-travel",
+    title: "Night Travel",
+    description: "Additional driver batta will be applicable if vehicle drive between 10.30 PM to 6 AM"
+  }
+];
+
 export interface PackageData {
   id: string;
   title: string;
