@@ -1,6 +1,7 @@
-import { Phone, MessageCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Phone } from "lucide-react";
+import { Button } from "./ui/button";
 
+import whatsappIcon from "../assets/whatsapp-svgrepo-com (1).svg";
 export const FloatingButtons = () => {
   const phoneNumber = "919959969880"; // Updated number
   const whatsappMessage = encodeURIComponent("Hi, I want to book a cab in Tirupati");
@@ -17,9 +18,9 @@ export const FloatingButtons = () => {
       >
         <Button 
           size="icon"
-          className="h-14 w-14 rounded-full shadow-2xl bg-[#25D366] hover:bg-[#20BA5A] text-white border-none"
+          className="h-12 w-12 rounded-full shadow-2xl bg-[#25D366] hover:bg-[#20BA5A] text-white border-none"
         >
-          <MessageCircle className="h-7 w-7" />
+          <img src={whatsappIcon} alt="WhatsApp" className="h-full w-full object-contain" />
         </Button>
       </a>
 

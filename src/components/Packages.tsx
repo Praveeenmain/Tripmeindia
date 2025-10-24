@@ -4,6 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CheckCircle, XCircle, Calendar, MapPin } from "lucide-react";
 import { packages } from "@/data/packages";
+import tourPackageImage from "@/assets/first.jpg";
+import tourPackageImage2 from "@/assets/second.jpeg";
+import tourPackageImage3 from "@/assets/third.jpg";
+import tourPackageImage4 from "@/assets/fourth.jpg";
+import tourPackageImage5 from "@/assets/fifith.jpeg";
+import tourPackageImage6 from "@/assets/sixth.jpg";
+import placeholderImage from "/public/placeholder.svg";
 
 export const Packages = () => {
   const phoneNumber = "919959969880";
@@ -27,7 +34,7 @@ export const Packages = () => {
 
         <div className="space-y-12">
           {packages.map((pkg, index) => (
-            <Card key={pkg.id} className="overflow-hidden border-2 hover:border-primary/30 transition-all duration-300 shadow-lg">
+            <Card key={pkg.id} className="max-w-3xl mx-auto overflow-hidden border-2 hover:border-primary/30 transition-all duration-300 shadow-lg">
               <CardHeader className="bg-gradient-to-r from-primary/5 to-primary/10 border-b">
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                   <div>
@@ -49,6 +56,17 @@ export const Packages = () => {
                   ))}
                 </div>
               </CardHeader>
+
+              {/* Package Image */}
+              <div className="px-6 pb-4">
+                <div className="aspect-video bg-gray-100 border-2 border-gray-300 rounded-lg flex items-center justify-center overflow-hidden cursor-pointer group hover:opacity-90 transition-opacity">
+                  <img 
+                    src={index === 0 ? tourPackageImage : index === 1 ? tourPackageImage2 : index === 2 ? tourPackageImage3 : index === 3 ? tourPackageImage4 : index === 4 ? tourPackageImage5 : index === 5 ? tourPackageImage6 : placeholderImage} 
+                    alt={`${pkg.title} Image`} 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
 
               <CardContent className="p-6">
                 <Tabs defaultValue="itinerary" className="w-full">

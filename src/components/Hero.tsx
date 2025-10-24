@@ -37,11 +37,11 @@ export const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 py-4 md:py-16 lg:py-20 text-center md:text-center">
         <div className="max-w-4xl mx-auto space-y-4 md:space-y-8 animate-fade-in">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-            Affordable & Reliable Taxi Services in <span className="text-blue-400">Tirupati & Tirumala</span>
+            Welcome to <span className="text-blue-400">tripmeindia</span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-white/95 max-w-3xl mx-auto font-medium">
-            Book trusted cabs for your temple visits, airport transfers, and outstation trips
+            "Your trusted partner for pilgrimage and travel in Tirupati and beyond."
           </p>
           
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center pt-4 md:pt-6">
