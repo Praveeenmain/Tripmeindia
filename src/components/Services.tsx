@@ -1,28 +1,45 @@
-import { MapPin, Plane, Mountain, Navigation } from "lucide-react";
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Car, Plane, Train, Landmark, Mountain } from "lucide-react";
 
-const services = [
+interface Service {
+  icon: React.ElementType;
+  title: string;
+  description: string;
+  price?: string; // Add optional price field
+}
+
+const services: Service[] = [
   {
-    icon: MapPin,
-    title: "Tirumala Temple Visits",
-    description: "Dedicated darshan trips with experienced drivers who know the best routes and timings"
+    icon: Car, // Assuming Car is imported from 'lucide-react'
+    title: "Outstation Cabs",
+    description: "Reliable and comfortable cabs for your outstation travel needs.",
+    price: "Starting from ₹18/km", // Example pricing
   },
   {
-    icon: Mountain,
+    icon: Plane, // Assuming Plane is imported from 'lucide-react'
+    title: "Airport Transfers",
+    description: "Hassle-free airport pickup and drop-off services.",
+    price: "Starting from ₹1125", // Example pricing
+  },
+  {
+    icon: Train, // Assuming Train is imported from 'lucide-react'
+    title: "Railway Transfers",
+    description: "Convenient railway station transfers for a smooth journey.",
+    price: "Starting from ₹938", // Example pricing
+  },
+  {
+    icon: Landmark, // Assuming Landmark is imported from 'lucide-react'
     title: "Local Sightseeing",
-    description: "Explore Tirupati's famous attractions including temples, waterfalls, and scenic spots"
+    description: "Explore local attractions with our guided sightseeing tours.",
+    price: "Starting from ₹2250", // Example pricing
   },
   {
-    icon: Plane,
-    title: "Airport Pickup/Drop",
-    description: "Timely airport transfers from Tirupati Airport with meet & greet service"
+    icon: Mountain, // Assuming Mountain is imported from 'lucide-react'
+    title: "Pilgrimage Tours",
+    description: "Spiritual journeys to sacred destinations with expert guidance.",
+    price: "Custom packages available", // Example pricing
   },
-  {
-    icon: Navigation,
-    title: "Outstation Packages",
-    description: "Comfortable long-distance trips to Chennai, Bangalore, and other nearby cities"
-  }
 ];
 
 export const Services = () => {
@@ -44,18 +61,19 @@ export const Services = () => {
               key={index}
               className="group hover:shadow-xl transition-all duration-300 border-border hover:border-primary/30"
             >
-              <CardHeader className="space-y-4">
-                <div className="flex items-start gap-4">
-                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-lg bg-primary/10 shrink-0 group-hover:bg-primary/20 transition-colors">
-                    <service.icon className="w-7 h-7 text-primary" />
+              <CardHeader className="flex-1">
+                <div className="flex items-center space-x-4">
+                  <div className="bg-primary/10 p-3 rounded-full">
+                    <service.icon className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors">
-                      {service.title}
-                    </CardTitle>
-                    <CardDescription className="text-base">
+                    <CardTitle className="text-xl font-semibold">{service.title}</CardTitle>
+                    <CardDescription className="text-muted-foreground mt-1">
                       {service.description}
                     </CardDescription>
+                    {service.price && (
+                      <p className="text-primary font-medium mt-2">{service.price}</p>
+                    )}
                   </div>
                 </div>
               </CardHeader>

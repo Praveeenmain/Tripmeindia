@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 import Logo from "@/assets/logo.png";
 export const Footer = () => {
   const phoneNumber = "919959969880"; // Updated number
@@ -11,10 +12,10 @@ export const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-2 md:gap-3 mb-4">
-              <img src={Logo} alt="TripmeIndia" className="h-12 sm:h-16 md:h-24 lg:h-28 w-auto block -my-1 md:-my-2" />
+              <img src={Logo} alt="Tripmeindia company" className="h-12 sm:h-16 md:h-24 lg:h-28 w-auto block -my-1 md:-my-2" />
               <div className="leading-tight select-none">
-                <span className="text-sm sm:text-base md:text-lg font-bold tracking-tight text-white" style={{ color: '#E8F4FD' }}>Tripme</span>
-                <span className="text-sm sm:text-base md:text-lg font-bold tracking-tight" style={{ color: '#4AA0D9' }}>India</span>
+                <span className="text-sm sm:text-base md:text-lg font-bold tracking-tight text-white" style={{ color: '#E8F4FD' }}>Tripmeindia</span>
+                <span className="text-sm sm:text-base md:text-lg font-bold tracking-tight" style={{ color: '#4AA0D9' }}> company</span>
               </div>
             </div>
             <p className="mb-4 opacity-90">
@@ -62,6 +63,22 @@ export const Footer = () => {
               <li className="opacity-90 hover:text-secondary transition-colors cursor-pointer">Tour Packages</li>
             </ul>
           </div>
+
+          {/* Policies */}
+          <div>
+            <h3 className="text-xl font-bold mb-4">Policies</h3>
+            <ul className="space-y-2">
+              <li className="opacity-90 hover:text-secondary transition-colors">
+                <Link to="/terms-and-conditions">Terms and Conditions</Link>
+              </li>
+              <li className="opacity-90 hover:text-secondary transition-colors">
+                <Link to="/privacy-policy">Privacy Policy</Link>
+              </li>
+              <li className="opacity-90 hover:text-secondary transition-colors">
+                <Link to="/refund-cancellation-policy">Refund and Cancellation Policy</Link>
+              </li>
+            </ul>
+          </div>
           
           {/* Places to Visit */}
           <div>
@@ -79,7 +96,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-background/20 pt-8 text-center">
           <p className="opacity-75">
-            Copyright © 2025 TripmeIndia.com - All Rights Reserved
+            Copyright © 2025 tripmeindia.com - All Rights Reserved
           </p>
           <p className="mt-2 text-sm opacity-75">
             Keywords: Tirupati Taxi, Tirumala Cab Booking, Tirupati Travels, Affordable Cabs in Tirupati, Temple Visit Taxi, Places to Visit in Tirumala, Tirupati Car Rental, Cabs in Tirupati, Tirumala Visiting Places, Car Rental in Tirupati
